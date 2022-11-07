@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="Testing.Testcls">
+        <methods>
+          <include name="teardown"/>
+          <include name="clickeraser"/>
+          <include name="recangledrwaing"/>
+          <include name="clickrecatngle"/>
+          <include name="erasehorizontalline"/>
+          <include name="verticalline"/>
+          <include name="drawrrectangle"/>
+          <include name="clickline"/>
+          <include name="horizontal"/>
+        </methods>
+      </class> <!-- Testing.Testcls -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
