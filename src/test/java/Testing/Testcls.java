@@ -44,12 +44,12 @@ public class Testcls {
 	@Test(priority=2)
 	public void horizontal() {
 		element=driver.findElement(By.id("imageTemp"));
-		act.clickAndHold(element).moveByOffset(-200, 0).perform();
+		act.clickAndHold(element).moveByOffset(-100, 0).perform();
 		act.moveByOffset(0, 0).perform();
 		act.click();
 		act.release().perform();
 		act.clickAndHold(element).moveByOffset(0, 0).perform();
-		act.moveByOffset(200, 0).perform();
+		act.moveByOffset(100, 0).perform();
 		act.click();
 		act.release().perform();
 		waits();
@@ -57,12 +57,12 @@ public class Testcls {
 	}
 	@Test(priority=2)
 	public void verticalline() {
-		act.clickAndHold(element).moveByOffset(0,-200).perform();
+		act.clickAndHold(element).moveByOffset(0,-100).perform();
 		act.moveByOffset(0, 0).perform();
 		act.click();
 		act.release().perform();
 		act.clickAndHold(element).moveByOffset(0, 0).perform();
-		act.moveByOffset(0, 200).perform();
+		act.moveByOffset(0, 100).perform();
 		act.click();
 		act.release().perform();
 		act.release(element).perform();
@@ -72,20 +72,14 @@ public class Testcls {
 	public void clickrecatngle() {
 		driver.findElement(By.xpath("//input[@title='Draw a rectangle']")).click();
 	}
-	@Test(priority=4)
-	public void drawrrectangle() {
-		act.clickAndHold(element).moveByOffset(100, -75).perform();
-		act.click();
-		act.release().perform();
-		act.release(element).perform();
 		
-	}
 	@Test(priority=5)
 	public void recangledrwaing() {
-		act.clickAndHold(element).moveByOffset(100, -75).perform();
-		act.click();
-		act.release().perform();
-		act.release(element).perform();
+		act.moveToElement(element, 10, 160)
+		.click()
+		.moveByOffset(-50, 10)
+		.release().perform();
+
 	}
 	@Test(priority=6)
 	public void clickeraser() {
@@ -98,12 +92,12 @@ public class Testcls {
 	}
 	@Test(priority=7)
 	public void erasehorizontalline() {
-		act.clickAndHold(element).moveByOffset(-200,0).perform();
+		act.clickAndHold(element).moveByOffset(-100,0).perform();
 		act.moveByOffset(0, 0).perform();
 		act.click();
 		act.release().perform();
 		act.clickAndHold(element).moveByOffset(0, 0).perform();
-		act.moveByOffset(200, 0).perform();
+		act.moveByOffset(100, 0).perform();
 		act.click();
 		act.release().perform();
 		act.release(element).perform();
